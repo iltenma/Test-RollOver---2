@@ -43,14 +43,13 @@ void draw() {
       sentido = sentido * (-1);
     }
   } else if (mouseX > 300 && mouseX < 380 && mouseY >= 300 && mouseY <= 380) {
-    fill (250, 120, 230);
     pushMatrix ();
-    translate(50, 20);
-    rotate(PI/angle);
-    rect (100, 100, 200, 200);
-    translate(100, 100);
-    popMatrix ();
-    angle++;
+    translate(width/2, height/2);
+    rotate(PI+angle);
+    fill (250, 120, 230);
+    rect (-100, -100, 200, 200);
+    popMatrix();
+    angle=angle+0.05;
     if (angle>=360) {
     angle=0;
     }
